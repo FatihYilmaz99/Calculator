@@ -39,7 +39,7 @@ public class Control implements Observer {
 			operation = Calc::division; break;
 		case "%":
 			operation = Calc::modulus; break;
-		
+
 		default:
 			operation = Calc::equation; break;
 		}

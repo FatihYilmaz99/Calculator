@@ -36,11 +36,11 @@ public class View extends java.util.Observable {
 	private Button equation = new Button("=");
 	private Button addition = new Button("+");
 	private Button subtraction = new Button("-");
-	private Button multiplication = new Button("×");
-	private Button division  = new Button("÷");
+	private Button multiplication = new Button("x");
+	private Button division  = new Button("Ã·");
 	private Button modulus  = new Button("%");
 	
-	// Button Maße
+	// Button Maï¿½e
 	private final double WIDTH = 75.0;
 	private final double HEIGHT = 50.0;
 	
@@ -108,7 +108,7 @@ public class View extends java.util.Observable {
 		equation.setId("result");
 	}
 
-	// Grid werden die Buttons hinzugefügt.
+	// Grid werden die Buttons hinzugefï¿½gt.
 	private void addButtons() {
 		/* Ziffern
 		 * (digit[7], 0, 1) ### (digit[8], 1, 1) ### (digit[9], 2, 1)
@@ -190,9 +190,9 @@ public class View extends java.util.Observable {
 				case 45:
 					control.handleOperation("-"); break;
 				case 42:
-					control.handleOperation("×"); break;
+					control.handleOperation("ï¿½"); break;
 				case 47:
-					control.handleOperation("÷"); break;
+					control.handleOperation("ï¿½"); break;
 				case 37:
 					control.handleOperation("%"); break;
 				}
@@ -212,14 +212,14 @@ public class View extends java.util.Observable {
 		text.setText("0");
 	}
 	
-	// Bei Änderung des Textes wird der Operand angepasst.
+	// Bei ï¿½nderung des Textes wird der Operand angepasst.
 	public void setText(String text) {
 		this.text.setText(text);
 		this.setChanged();
 		this.notifyObservers();
 	}
 	
-	// Zeigt das Ergebnis mit dem nächsten Operator an.
+	// Zeigt das Ergebnis mit dem nï¿½chsten Operator an.
 	public void setText(double result, String operator) {
 		String text = Double.toString(result).replace('.', ',');
 		if (text.endsWith(",0")) text = text.substring(0, text.length()-2);
